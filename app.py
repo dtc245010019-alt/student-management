@@ -12,5 +12,12 @@ def get_student(student_id):
             return student
     return None
 
+def search_students(keyword):
+    result = []
+    for student in students:
+        if keyword.lower() in student["name"].lower():
+            result.append(student)
+    return result
+
 if __name__ == "__main__":
     print(get_students())
